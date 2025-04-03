@@ -1,0 +1,289 @@
+.loader {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $color-pine-tree;
+    z-index: 20;
+    opacity: 1;
+    animation: disappearance 1s linear 21s forwards;
+
+    &__progress {
+        width: 280px;
+        height: 2px;
+        background-color: $color-charcoal;
+        position: absolute;
+        bottom: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            width: 280px;
+            height: 2px;
+            background-color: $color-white;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: translateX(-100%);
+            animation: progress 21s linear 0s forwards;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        filter: blur(10px);
+        opacity: 0;
+
+        &:nth-child(1) {
+            left: 100%;
+            top: 30%;
+            transform: translate(-50%, -50%) scale(2.5);
+            animation: filterCompany 6s linear 0.5s forwards,
+            moveLeftTop 6s ease-out  0.5s forwards;
+
+        }
+
+        &:nth-child(2) {
+            left: 0;
+            top: 55%;
+            transform: translate(-50%, -50%) scale(2.5);
+            animation-delay: 1.7s;
+            animation: filterCompany 6s linear 1.2s forwards,
+                moveLeftTop 6s ease-out 1.2s forwards;
+        }
+
+        &:nth-child(3) {
+            left: 25%;
+            top: 100%;
+            transform: translate(-50%, -50%) scale(2.5);
+            animation-delay: 2.5s;
+            animation: filterCompany 6s linear 2s forwards,
+                moveLeftTop 6s ease-out 2s forwards;
+
+        }
+
+        &:nth-child(4) {
+            left: 100%;
+            top: 90%;
+            transform: translate(-50%, -50%) scale(2.5);
+            animation-delay: 3.3s;
+            animation: filterCompany 6s linear 2.8s forwards,
+                moveLeftTop 6s ease-out 2.8s forwards;
+
+        }
+
+        &:nth-child(5) {
+            left: 0;
+            top: 40%;
+            transform: translate(-50%, -50%) scale(2.5);
+            animation-delay: 4s;
+            animation: filterCompany 6s linear 3.5s forwards,
+                moveLeftTop 6s ease-out 3.5s forwards;
+
+        }
+
+        &:nth-child(6) {
+            left: 90%;
+            top: 0;
+            transform: translate(-50%, -50%) scale(2.5);
+            animation-delay: 4.7s;
+            animation: filterCompany 6s linear 4.2s forwards,
+                moveLeftTop 6s ease-out 4.2s forwards;
+
+        }
+
+        &:nth-child(7) {
+            left: 100%;
+            top: 60%;
+            transform: translate(-50%, -50%) scale(2.5);
+            animation-delay: 5.5s;
+            animation: filterCompany 6s linear 5s forwards,
+                moveLeftTop 6s ease-out 5s forwards;
+
+        }
+
+        &:nth-child(8) {
+            left: 40%;
+            top: 0;
+            transform: translate(-50%, -50%) scale(2.5);
+            animation-delay: 6.3s;
+            animation: filterCompany 6s linear 5.8s forwards,
+                moveLeftTop 6s ease-out 5.8s forwards;
+
+        }
+
+        &:nth-child(9) {
+            left: 25%;
+            top: 100%;
+            transform: translate(-50%, -50%) scale(2.5);
+            animation: filterCompany 6s linear 6.5s forwards,
+                moveLeftTop 6s ease-out 6.5s forwards;
+
+        }
+
+        &:nth-child(10) {
+            left: 50%;
+            top: 0;
+            transform: translate(-50%, -50%) scale(2.5);
+            animation: filterCompany 6s linear 7.2s forwards,
+                moveLeftTop 6s ease-out 7.2s forwards;
+
+        }
+
+        &:nth-child(11) {
+            left: 100%;
+            top: 60%;
+            transform: translate(-50%, -50%) scale(2.5);
+            animation-delay: 8.5s;
+            animation: filterCompany 6s linear 8s forwards,
+                moveLeftTop 6s ease-out 8s forwards;
+
+        }
+
+        &:nth-child(12) {
+            left: 60%;
+            top: 100%;
+            transform: translate(-50%, -50%) scale(2.5);
+            animation-delay: 9.3s;
+            animation: filterCompany 6s linear 8.8s forwards,
+                moveLeftTop 6s ease-out 8.8s forwards;
+
+        }
+
+        &:nth-child(13) {
+            right: calc(50% + 300px);
+            bottom: calc(50% + 300px);
+            filter: blur(20px);
+            transform: scale(7) translate(50%, 50%);
+            opacity: 0;
+            animation: filterLogo 9s linear 12s forwards;
+        }
+    }
+}
+
+@keyframes filterCompany {
+    0% {
+        filter: blur(10px);
+        opacity: 0;
+    }
+
+    5% {
+        filter: blur(10px);
+        opacity: 1;
+    }
+
+    20% {
+        filter: blur(0);
+    }
+
+    85% {
+        filter: blur(0);
+        opacity: 1;
+    }
+
+    100% {
+        filter: blur(0);
+        opacity: 0;
+    }
+}
+
+@keyframes filterLogo {
+    0% {
+        filter: blur(20px);
+        opacity: 0;
+    }
+
+    2% {
+        filter: blur(20px);
+        opacity: 1;
+        transform: scale(7) translate(50%, 50%);
+    }
+
+    10% {
+        filter: blur(0);
+    }
+
+    30% {
+        right: 50%;
+        bottom: 50%;
+        filter: blur(0);
+        opacity: 1;
+        transform: scale(1) translate(50%, 50%);
+    }
+
+    42% {
+        filter: blur(0);
+        opacity: 1;
+        transform: scale(1) translate(50%, 50%);
+    }
+
+    54% {
+        filter: blur(0);
+        opacity: 0;
+        transform: scale(1) translate(50%, 50%);
+    }
+
+    66% {
+        filter: blur(0);
+        opacity: 1;
+        transform: scale(1) translate(50%, 50%);
+    }
+
+    78% {
+        filter: blur(0);
+        opacity: 0;
+        transform: scale(1) translate(50%, 50%);
+    }
+
+    90% {
+        filter: blur(0);
+        opacity: 1;
+        transform: scale(1) translate(50%, 50%);
+    }
+
+    100% {
+        right: 50%;
+        bottom: 50%;
+        filter: blur(0);
+        opacity: 0;
+        transform: scale(1) translate(50%, 50%);
+    }
+}
+
+@keyframes moveLeftTop {
+    0% {
+        transform: translate(-50%, -50%) scale(2.5);
+    }
+
+    100% {
+        left: 50%;
+
+        top: 50%;
+
+        transform: translate(-50%, -50%) scale(0.2);
+    }
+}
+
+@keyframes disappearance {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        z-index: -20;
+    }
+}
+
+@keyframes progress {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
